@@ -14,13 +14,13 @@ scrolling="false" author="tjbtjbtjb">
 <title>URL</title>
 </head>
 <body style="background-color:transparent;">
-<div id="urlID"><img src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif"/></div>
+<div id="urlID"><img src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif" /></div>
 <script type="text/javascript"> 
   // Get userprefs 
   var prefs = new gadgets.Prefs(); 
   var url = prefs.getString("url"); 
   
-  var mylink = '<a href="'+url+'>hop</a>';
+  var mylink = '<a href="'+url+'">hop</a>';
   var dest = document.getElementById('urlID'); 
   dest.innerHTML = mylink; 
 </body></html>

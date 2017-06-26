@@ -1,30 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-
-<ModulePrefs title="tjbtjbtjb / gadgets for google site classic" width="225" height="35" 
-scrolling="false" author="tjbtjbtjb">
-</ModulePrefs>
-
-<UserPref name="url" display_name="URL" datatype="string" default_value=""/>
-
-<Content type="html">
-
-<![CDATA[
-<html>
-<head>
-<title>URL</title>
-</head>
-<body style="background-color:transparent;">
-<div id="urlID"><img src="http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif" /></div>
-<script type="text/javascript"> 
-  // Get userprefs 
-  var prefs = new gadgets.Prefs(); 
-  var url = prefs.getString("url"); 
+  <ModulePrefs title="URL" height="400"/>
+  <UserPref name="url" display_name="Url" default_value="http://www.google.fr"/>
   
-  var mylink = '<a href="'+url+'">hop</a>';
-  var dest = document.getElementById('urlID'); 
-  dest.innerHTML = mylink; 
-</body></html>
-]]>
+   <Content type="html">
+   <![CDATA[
+     <div id="content_div"></div>
+     
+     <script type="text/javascript">
+   // Get userprefs
+   var prefs = new gadgets.Prefs();
+   function displayUrl () {
+     var element = document.getElementById('content_div');
+     var lUrl = prefs.getString("url");
 
-</Content>
+     element.style.height=250;
+     html = "<br/>Le lien : ";
+     html += '<a href="'+lUrl+'">ici</a><br/>';
+     element.innerHTML = html;
+   }
+   gadgets.util.registerOnLoadHandler(displayUrl);
+   </script>
+   ]]>
+  </Content>
 </Module>

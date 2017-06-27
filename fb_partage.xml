@@ -3,10 +3,11 @@
   <ModulePrefs title="Partage FB" height="400"/>
 
   <Content type="html">
+    <div id="fb-root"></div>
     
 <![CDATA[
 
-<div id="fb-root"></div>
+
 <script type="text/javascript">(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -15,15 +16,17 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-like" 
+
+   ]]>
+   
+    <div class="fb-like" 
      data-href="https://developers.facebook.com/docs/plugins/" 
      data-layout="standard" 
      data-action="like" 
      data-size="small" 
      data-show-faces="true" data-share="true">
 </div>
-   ]]>
-   
+    
   </Content>
 </Module>
 
